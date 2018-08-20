@@ -2,12 +2,13 @@ if ($.cookie("theme_csspath")) {
     $('link#theme-stylesheet').attr("href", $.cookie("theme_csspath"));
 }
 
+
 config = {
     countdown: {
-        year: 2018,
-        month: 8,
-        day: 20,
-        hour: 13,
+        year: 0,
+        month: 0,
+        day: 0,
+        hour: 0,
         minute: 0,
         second: 0,
     }

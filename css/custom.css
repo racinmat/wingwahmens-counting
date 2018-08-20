@@ -1,1 +1,29 @@
 /* your styles go here */
+#input, #history {
+    display: block;
+    margin: 20px auto 0 auto;
+    position: relative;
+    z-index: 99;
+}
+
+button {
+    border-radius: 7px;
+    width: 100px;
+    height: 30px;
+}
+
+#history {
+    background:none!important;
+    border:none;
+    padding:0!important;
+    color: blue;
+}
+
+#entries {
+    margin: 0 auto;
+}
+
+td {
+    font-size: 22px;
+    color: blue;
+}
