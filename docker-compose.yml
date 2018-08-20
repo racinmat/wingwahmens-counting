@@ -1,0 +1,12 @@
+version: '3'
+services:
+  apache:
+    image: httpd:alpine
+    volumes:
+      - "./index.html:/usr/local/apache2/htdocs/index.html:ro"
+      - "./css:/usr/local/apache2/htdocs/css:ro"
+      - "./js:/usr/local/apache2/htdocs/js:ro"
+      - "./img:/usr/local/apache2/htdocs/img:ro"
+    ports:
+      - 8090:80
+    restart: always
