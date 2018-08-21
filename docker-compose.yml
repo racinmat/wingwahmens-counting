@@ -1,9 +1,18 @@
 version: '3'
 services:
-  apache:
-    image: httpd:alpine
+  php_apache:
+    build:
+      context: php-apache
     volumes:
-      - ".:/usr/local/apache2/htdocs:ro"
+      - .:/var/www/html:ro
     ports:
       - 8090:80
     restart: always
+  mysql:
+    image: mysql:5.7  # must use this version, newer versions have problem with remote root connecting into db, shit with caching_sha2_password problems
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+      MYSQL_DATABASE: "filipovyodchody"
+    volumes:
+      - ./mysql-datadir:/var/lib/mysql
+      - ./tables.sql:/var/filip/tables.sql:ro

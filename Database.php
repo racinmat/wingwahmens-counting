@@ -1,7 +1,7 @@
 <?php
 
 
-define('SQL_HOST', 'localhost');
+define('SQL_HOST', 'mysql');
 define('SQL_DBNAME', 'filipovyodchody');
 define('SQL_USERNAME', 'root');
 define('SQL_PASSWORD', '');
